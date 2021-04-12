@@ -7,6 +7,9 @@
 
 ## 部署部分
 
-- 1、下载**putty**
+- 1、下载**putty**和**tortoisgit**
+- 2、安装**putty**和**tortoisgit**
+- 3、为了方便使用建议把**putty**和**tortoisgit**目录下的**PuTTYgen**放到桌面
+- 4、打开**putty**
 
 ---
