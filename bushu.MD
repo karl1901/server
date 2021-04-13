@@ -48,9 +48,10 @@
 - 2、**修改sudo权限：`visudo`，添加内容：`username ALL=(ALL) ALL`**  
 ![img30](img/bs/微信截图_20210413092201.png)
 
-> 用户的其他操作：
+> 用户的其他操作：  
 **查看用户列表：ls -l /home/**  
-**切换用户：su - username，切换root用户：su -**  
+**切换用户：su - username**  
+**切换root用户：su -**  
 **退出用户：exit**  
 **删除用户：userdel -rf username**  
 
