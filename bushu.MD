@@ -9,7 +9,7 @@
 
 ### 1、putty
 
-- 1、下载**putty**
+- 1、下载**putty** (本项目提供了putty安装包)
 - 2、安装**putty**
 - 3、为了方便使用建议把**putty**和**putty**目录下的**PuTTYgen**放到桌面
 - 4、打开**putty**  
@@ -138,6 +138,25 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 **启动服务指令：systemctl start nginx**  
 **配置文件默认位置：/etc/nginx/nginx.conf 和 /etc/nginx/conf.d/*.conf**  
 
+### 7、阿里云创建项目
+
+- 1、进入**code.aliyun.com**，**创建**一个public服务器项目  
+![img36](img/bs/微信截图_20210413112537.png)
+- 2、**克隆**到本地  
+![img37](img/bs/微信截图_20210413112651.png)
+- 3、**新建**三个文件：  
+- (建议：跟服务器有关的都提交到git，本项目提供了nginx文件)  
+![img38](img/bs/微信截图_20210413112847.png)
+- 4、**编辑**server.nginx.conf配置文件  
+![img39](img/bs/微信截图_20210413113502.png)
+- 5、**新建**主页(index.html)，添加一点内容  
+![img40](img/bs/微信截图_20210413113724.png)
+- 6、**推送并提交**项目
+![img41](img/bs/微信截图_20210413113906.png)
+
+### 8、git
+
+- 1、
 
 ---
 
