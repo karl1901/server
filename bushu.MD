@@ -202,8 +202,8 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 ![img45](img/bs/微信截图_20210413121154.png)
 - 4、打开**test中的nginx的配置文件**,**复制前两条指令**  
   - **查看：`sudo nginx -t -c /home/karl/git/test/nginx/server.nginx.conf`**  
-  - **启动：`sudo nginx -c /home/karl/git/demo-server/nginx/server.nginx.conf`**  
-  - **关闭：`sudo nginx -s stop -c /home/karl/git/demo-server/nginx/server.nginx.conf`**  
+  - **启动：`sudo nginx -c /home/karl/git/test/nginx/server.nginx.conf`**  
+  - **关闭：`sudo nginx -s stop -c /home/karl/git/test/nginx/server.nginx.conf`**  
   - **重置：`sudo nginx -s reload`**  
 ![img46](img/bs/微信截图_20210413121355.png)
 - 5、进入**test**文件中，**执行**复制的两行指令 (查看和启动)，启动时需输入用户密码
