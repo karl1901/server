@@ -114,12 +114,13 @@
 ### 6、nginx
 
 - 1、**执行`vi /etc/yum.repos.d/nginx.repo`编辑nginx下载源，内容如下：**  
-> [nginx-stable]  
+> [ginx-stable]  
 name=nginx stable repo  
 baseurl=http://nginx.org/packages/centos/$releasever/$basearch/  
 gpgcheck=1  
 enabled=1  
 gpgkey=https://nginx.org/keys/nginx_signing.key  
+
 ![img33](img/bs/微信截图_20210413110244.png)
 - 2、**执行`yum install nginx -y`安装nginx**  
   - **执行`nginx -v`查看安装是否成功(会显示版本号)**  
