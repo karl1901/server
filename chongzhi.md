@@ -24,6 +24,8 @@
 - 12、出现如图提示，表示重置服务器成功了，就可以进入管理实例了  
 ![img08](img/cz/微信截图_20210412223044.png)
 
+> [顶部](#阿里云ecs服务器重置)  
+
 ---
 
 - [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master)
