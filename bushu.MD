@@ -152,7 +152,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 ![img39](img/bs/微信截图_20210413113502.png)
 - 5、**新建**主页(index.html)，添加一点内容  
 ![img40](img/bs/微信截图_20210413113724.png)
-- 6、**推送并提交**项目
+- 6、**推送并提交**项目  
 ![img41](img/bs/微信截图_20210413113906.png)
 
 ### 8、git
