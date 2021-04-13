@@ -164,8 +164,8 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 - 2、配置**私有key**： (两个用户都要配置root和新建的) 
   - **执行`vi ~/.ssh/id_rsa`编辑私钥文件，将私钥复制进去**  
   - **执行`chmod 600 ~/.ssh/id_rsa`配置权限**  
-![img49](img/bs/微信截图_20210413124228.png)
-![img43](img/bs/微信截图_20210413115901.png)
+![img49](img/bs/微信截图_20210413124228.png)  
+![img43](img/bs/微信截图_20210413115901.png)  
 ![img44](img/bs/微信截图_20210413120033.png)
 - 3、在新创建的用户目录下**创建git文件**，**进入git文件**，**克隆项test项目到git文件下**，**查看**是否有**test文件**了  
 ![img45](img/bs/微信截图_20210413121154.png)
