@@ -136,7 +136,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 > nginx其他操作：  
 **配置nginx服务开机启动指令：systemctl enable nginx**  
 **启动服务指令：systemctl start nginx**  
-**配置文件默认位置：/etc/nginx/nginx.conf和/etc/nginx/conf.d/*.conf**  
+**配置文件默认位置：/etc/nginx/nginx.conf 和 /etc/nginx/conf.d/*.conf**  
 
 
 ---
