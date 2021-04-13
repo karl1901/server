@@ -145,6 +145,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 - 2、**克隆**到本地  
 ![img37](img/bs/微信截图_20210413112651.png)
 - 3、**新建**三个文件：  
+- (把git密钥，登录服务器的公钥和私钥放到项目的key文件夹下)  
 - (建议：跟服务器有关的都提交到git，本项目提供了nginx文件)  
 ![img38](img/bs/微信截图_20210413112847.png)
 - 4、**编辑**server.nginx.conf配置文件  
