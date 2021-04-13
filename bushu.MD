@@ -167,7 +167,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 
 > [顶部](#部署部分)  
 
-- 1、进入[code.aliyun.com](code.aliyun.com)，**创建**一个public服务器项目  
+- 1、进入[code.aliyun.com](https://code.aliyun.com/)，**创建**一个public服务器项目  
 ![img36](img/bs/微信截图_20210413112537.png)
 - 2、**克隆**到本地  
 ![img37](img/bs/微信截图_20210413112651.png)
