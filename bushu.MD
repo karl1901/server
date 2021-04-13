@@ -7,7 +7,19 @@
 
 ## 部署部分
 
-### 1、putty
+> [1、putty](#putty)
+> [2、tmux](#tmux)
+> [3、用户](#用户)
+> [4、putty-配置无密码登录](#putty-配置无密码登录)
+> [5、防火墙](#防火墙)
+> [6、nginx](#nginx)
+> [7、阿里云创建项目](#阿里云创建项目)
+> [8、git](#git)
+> [9、mysql](#mysql)
+
+### putty
+
+> [顶部](#部署部分)  
 
 - 1、下载**putty** (本项目提供了putty安装包)
 - 2、安装**putty**
@@ -23,7 +35,9 @@
 ![img05](img/bs/微信截图_20210412233227.png)
 ![img06](img/bs/微信截图_20210412233415.png)
 
-### 2、tmux
+### tmux
+
+> [顶部](#部署部分)  
 
 - 1、**安装tmux：**`yum install tmux -y`  
 ![img07](img/bs/微信截图_20210412234746.png)
@@ -41,7 +55,9 @@
 **移动到指定方向的窗口：Ctrl+b 方向键**  
 **关闭当前窗口：Ctrl+d 或 exit** ('或'字后面是指令)  
 
-### 3、用户
+### 用户
+
+> [顶部](#部署部分)  
 
 - 1、**添加**用户：`adduser username`，名字自定义，然后**修改**用户密码：`passwd username`  
 ![img31](img/bs/微信截图_20210413092537.png)
@@ -55,7 +71,9 @@
 **退出用户：exit**  
 **删除用户：userdel -rf username**  
 
-### 4、putty 配置无密码登录
+### putty 配置无密码登录
+
+> [顶部](#部署部分)  
 
 - 8、打开**PuTTYgen**，生成**公钥**和**私钥**保存到本地 (建议：**git的密钥**和服务器登录的**公钥**和**私钥**都丢在服务器项目目录下的**key**文件中，没有文件就创建一个)  
 ![img11](img/bs/微信截图_20210413080314.png)
@@ -96,7 +114,10 @@
 - **注：新建的用户也有执行相同的操作：9-11的步骤**
 - **！！！拒绝使用密码一旦开启，密钥文件若丢失，就再也无法登录服务器了(但是登录后可以改回密码登录权限) ！！！**
 
-### 5、防火墙
+### 防火墙
+
+> [顶部](#部署部分)  
+
 - 1、**开启**防火墙、**重启**防火墙、添加**80/443/3306 (http/https/mysql)端口**和**http服务**，**重启**防火墙，**查看**是否添加成功
   - **开启防火墙：`systemctl enable firewalld.service`**
   - **重启防火墙：`systemctl restart firewalld.service`**
@@ -111,7 +132,9 @@
 **删除端口(80)：firewall-cmd --permanent --zone=public --remove-port=80/tcp**  
 **删除服务(http)：firewall-cmd --permanent --zone=public --remove-service=http**  
 
-### 6、nginx
+### nginx
+
+> [顶部](#部署部分)
 
 - 1、**执行`vi /etc/yum.repos.d/nginx.repo`编辑nginx下载源，内容如下：**  
 
@@ -138,7 +161,9 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 **启动服务指令：systemctl start nginx**  
 **配置文件默认位置：/etc/nginx/nginx.conf 和 /etc/nginx/conf.d/*.conf**  
 
-### 7、阿里云创建项目
+### 阿里云创建项目
+
+> [顶部](#部署部分)  
 
 - 1、进入**code.aliyun.com**，**创建**一个public服务器项目  
 ![img36](img/bs/微信截图_20210413112537.png)
@@ -155,7 +180,9 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 - 6、**推送并提交**项目  
 ![img41](img/bs/微信截图_20210413113906.png)
 
-### 8、git
+### git
+
+> [顶部](#部署部分)  
 
 - 1、**下载**git，**查看版本**检查是否安装成功  
   - **执行`yum install git -y`安装git**  
@@ -178,7 +205,9 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 
 - 注：每次在本地编辑上传项目文件后都要到git/test文件下拉取一次页面才会显示最新的样子，这样很麻烦！所以建议在tmux中再开一个新建用户的窗口，进入git/test文件中，执行指令：**`watch -n 600 git pull`** (单位：秒)，意思是：每隔十分钟拉取一次，且这个窗口不能关闭，关闭只后就不会自动拉取了！(关闭窗口：Ctrl+c)
 
-### 9、mysql
+### mysql
+
+> [顶部](#部署部分)  
 
 下载：`wget https://repo.mysql.com//mysql80-community-release-el8-1.noarch.rpm`  
 安装源：`yum install mysql80-community-release-el8-1.noarch.rpm -y`  
@@ -195,7 +224,9 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 添加用户：`CREATE USER '用户名'@'%' IDENTIFIED BY '密码';`  
 用户密码`IDENTIFIED WITH mysql_native_password`可以不使用加密密码  
 用户授权：`GRANT ALL ON *.* TO '用户名'@'%' with grant option;`  
-权限功能立即生效：`FLUSH PRIVILEGES;`  
+权限功能立即生效：`FLUSH PRIVILEGES;` 
+
+> [顶部](#部署部分)  
 
 ---
 
