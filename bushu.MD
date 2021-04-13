@@ -221,7 +221,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 禁用mysql5：`dnf config-manager --disable mysql57-community` 或 `yum-config-manager --disable mysql57-community`  
 启用mysql8：`dnf config-manager --enable mysql80-community` 或 `yum-config-manager --enable mysql80-community`  
 关闭默认mysql：`yum module disable mysql -y`  
-安装mysqlyum `install mysql-community-server -y`  
+安装mysqlyum `yum install mysql-community-server -y`  
 启用mysql服务：`systemctl enable mysqld`  
 启动mysql服务：`systemctl start mysqld`  
 查看mysql的默认root密码：`grep 'temporary password' /var/log/mysqld.log`  
