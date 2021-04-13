@@ -114,6 +114,7 @@
 ### 6、nginx
 
 - 1、**执行`vi /etc/yum.repos.d/nginx.repo`编辑nginx下载源，内容如下：**  
+
 ``` txt
 [ginx-stable]  
 name=nginx stable repo  
