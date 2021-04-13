@@ -26,21 +26,21 @@
 ![img11](img/bs/微信截图_20210413080314.png)
 ![img12](img/bs/微信截图_20210413080608.png)
 - 这里的文件名可以自定义，只要自己能分清是公钥还是私钥就行  
-![img13](img/bs/微信截图_20210413080820.png)
-![img14](img/bs/微信截图_20210413080942.png)
-![img15](img/bs/微信截图_20210413081029.png)
-![img16](img/bs/微信截图_20210413081243.png)
+![img13](img/bs/微信截图_20210413080820.png)  
+![img14](img/bs/微信截图_20210413080942.png)  
+![img15](img/bs/微信截图_20210413081029.png)  
+![img16](img/bs/微信截图_20210413081243.png)  
 ![img17](img/bs/微信截图_20210413081443.png)
-- 9、打开**putty**，**登录**用户 
-  - **创建目录：`mkdir ~/.ssh`**
-  - **设置权限：`chmod 700 ~/.ssh`**
-  - **编辑密钥文件：`vi ~/.ssh/authorized_keys`**
+- 9、打开**putty**，**登录**用户  
+  - **创建目录：`mkdir ~/.ssh`**  
+  - **设置权限：`chmod 700 ~/.ssh`**  
+  - **编辑密钥文件：`vi ~/.ssh/authorized_keys`**  
 ![img18](img/bs/微信截图_20210413082109.png)
 - 10、编辑**密钥文件**，粘贴**公钥**，**保存并退出**  
 ![img19](img/bs/微信截图_20210413082447.png)
 ![img20](img/bs/微信截图_20210413082728.png)
 - 11、设置**密钥文件权限**  
-  - **设置权限：`chmod 600 ~/.ssh/authorized_keys`** 
+  - **设置权限：`chmod 600 ~/.ssh/authorized_keys`**  
 ![img21](img/bs/微信截图_20210413082926.png)
 - 12、打开**putty**，**加载**服务器  
 ![img22](img/bs/微信截图_20210413083151.png)
@@ -102,9 +102,9 @@
 - **注：两边的用户都要做一遍，新建的用户要输入管理员密码**
 
 > 防火墙其他操作：  
-**查看防火墙状态：systemctl status firewalld.service**
-**删除端口(80)：firewall-cmd --permanent --zone=public --remove-port=80/tcp**
-**删除服务(http)：firewall-cmd --permanent --zone=public --remove-service=http**
+**查看防火墙状态：systemctl status firewalld.service**  
+**删除端口(80)：firewall-cmd --permanent --zone=public --remove-port=80/tcp**  
+**删除服务(http)：firewall-cmd --permanent --zone=public --remove-service=http**  
 
 ### 5、nginx
 
