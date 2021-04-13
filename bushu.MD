@@ -173,7 +173,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 - (把git密钥，登录服务器的公钥和私钥放到项目的key文件夹下)  
 - (建议：跟服务器有关的都提交到git，本项目提供了nginx文件)  
 ![img38](img/bs/微信截图_20210413112847.png)
-- 4、**编辑**server.nginx.conf配置文件  
+- 4、**编辑**server.nginx.conf配置文件 (另一个mime.types文件是固定的，不动)  
 ![img39](img/bs/微信截图_20210413113502.png)
 - 5、**新建**主页(index.html)，添加一点内容  
 ![img40](img/bs/微信截图_20210413113724.png)
@@ -195,8 +195,14 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 ![img43](img/bs/微信截图_20210413115901.png)  
 ![img44](img/bs/微信截图_20210413120033.png)
 - 3、在新创建的用户目录下**创建git文件**，**进入git文件**，**克隆项test项目到git文件下**，**查看**是否有**test文件**了  
+  - **创建git文件：`mkdir git`**  
+  - **进入git文件：`cd git`**  
 ![img45](img/bs/微信截图_20210413121154.png)
 - 4、打开**test中的nginx的配置文件**,**复制前两条指令**  
+  -  **查看：`sudo nginx -t -c /home/karl/git/test/nginx/server.nginx.conf`**  
+  - **启动：`sudo nginx -c /home/karl/git/demo-server/nginx/server.nginx.conf`**  
+  - **关闭：`sudo nginx -s stop -c /home/karl/git/demo-server/nginx/server.nginx.conf`**  
+  - **重置：`sudo nginx -s reload`**  
 ![img46](img/bs/微信截图_20210413121355.png)
 - 5、进入**test**文件中，**执行**复制的两行指令 (查看和启动)，启动时需输入用户密码
 ![img47](img/bs/微信截图_20210413121748.png)
