@@ -300,6 +300,14 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 用户授权：`GRANT ALL ON *.* TO '用户名'@'%' with grant option;`  
 权限功能立即生效：`FLUSH PRIVILEGES;` 
 
+### jdk
+
+> [顶部](#部署部分)  
+
+执行`yum search java|grep jdk`查找可用的`jdk`版本  
+执行`yum install java-1.8.0-openjdk-devel.x86_64 -y`安装`openjdk1.8`  
+执行`javac -version`测试jdk是否安装成功  
+
 > [顶部](#部署部分)  
 
 ---
