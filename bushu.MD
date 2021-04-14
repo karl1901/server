@@ -17,6 +17,8 @@
 > [8、git](#git)  
 > [--- git其他指令](#git其他指令)  
 > [9、mysql](#mysql)  
+> [10、jdk](#jdk)  
+> [11、tomcat](#tomcat)  
 
 ### putty
 
@@ -307,6 +309,13 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 - 执行`yum search java|grep jdk`查找可用的`jdk`版本  
 - 执行`yum install java-1.8.0-openjdk-devel.x86_64 -y`安装`openjdk1.8`  
 - 执行`javac -version`测试jdk是否安装成功  
+
+### tomcat
+
+> [顶部](#部署部分)  
+
+- 执行`wget https://mirrors.bfsu.edu.cn/apache/tomcat/tomcat-8/v8.5.65/bin/apache-tomcat-8.5.65-fulldocs.tar.gz`下载  
+- 执行`tar -zxvf apache-tomcat-8.5.65.tar.gz`解压  
 
 > [顶部](#部署部分)  
 
