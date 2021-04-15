@@ -338,6 +338,7 @@ location /myvue/ {
 ```
 
 - 2、配置`vue.config.js`文件，内容如下：  
+  - 本项目已提供`vue配置文件`  
 
 ``` txt
 
