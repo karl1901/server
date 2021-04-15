@@ -19,6 +19,7 @@
 > [9、mysql](#mysql)  
 > [10、jdk](#jdk)  
 > [11、tomcat](#tomcat)  
+> [12、部署Vue项目](#部署vue项目)  
 
 ### putty
 
@@ -316,6 +317,41 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 
 - 执行`wget https://mirrors.bfsu.edu.cn/apache/tomcat/tomcat-8/v8.5.65/bin/apache-tomcat-8.5.65-fulldocs.tar.gz`下载  
 - 执行`tar -zxvf apache-tomcat-8.5.65.tar.gz`解压  
+
+### 部署vue项目
+
+> [顶部](#部署部分)
+
+- 1、配置nginx的`server.nginx.conf`文件，新增一个`location`  
+
+> /myvue/：服务器端虚拟路径  
+> /home/karl/git/test-server/myvue/：虚拟路径指向的目录  
+
+``` txt
+
+location /myvue/ {
+  alias /home/karl/git/test-server/myvue/;
+  ndex index.html;
+ expires -1;
+  }
+
+```
+
+- 2、配置`vue.config.js`文件，内容如下：  
+
+``` txt
+
+module.exports = {
+  // 生成环境不需要map文件
+  productionSourceMap: !process.env.NODE_ENV === 'production',
+  // 项目输出路径(build后项目保存的路径)
+  outputDir: 'D:\\myvue\\test',
+  // 服务器虚拟路径(判断是否是本地启动还是服务器启动)
+  publicPath: process.env.NODE_ENV === 'production' ? '/myvue/' : '/'
+};
+
+
+```
 
 > [顶部](#部署部分)  
 
