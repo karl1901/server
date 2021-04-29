@@ -204,6 +204,8 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
   - **进入git文件：`cd git`**  
 ![img45](img/bs/微信截图_20210413121154.png)
 - 4、打开**test中的nginx的配置文件**,**复制前两条指令**  
+  - nginx的VsCode插件  
+  - ![img49](img/bs/微信截图_20210429142504.png)  
   - **查看：`sudo nginx -t -c /home/karl/git/test/nginx/server.nginx.conf`**  
   - **启动：`sudo nginx -c /home/karl/git/test/nginx/server.nginx.conf`**  
   - **关闭：`sudo nginx -s stop -c /home/karl/git/test/nginx/server.nginx.conf`**  
