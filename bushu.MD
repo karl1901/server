@@ -333,7 +333,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 
 location /myvue/ {
   alias /home/karl/git/test-server/myvue/;
-  ndex index.html;
+  index index.html;
  expires -1;
   }
 
