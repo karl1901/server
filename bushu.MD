@@ -288,6 +288,8 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 
 > [顶部](#部署部分)  
 
+- **CentOs 8及以上版本**  
+
 - 下载：`wget https://repo.mysql.com//mysql80-community-release-el8-1.noarch.rpm`  
 - 安装源：`yum install mysql80-community-release-el8-1.noarch.rpm -y`  
 - 查看安装配置文件：`vi /etc/yum.repos.d/mysql-community.repo`  
@@ -303,7 +305,25 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 - 添加用户：`CREATE USER '用户名'@'%' IDENTIFIED BY '密码';`  
 - 用户密码`IDENTIFIED WITH mysql_native_password`可以不使用加密密码  
 - 用户授权：`GRANT ALL ON *.* TO '用户名'@'%' with grant option;`  
-- 权限功能立即生效：`FLUSH PRIVILEGES;` 
+- 权限功能立即生效：`FLUSH PRIVILEGES;`  
+
+- **CentOs 7及以上版本**  
+
+- 查看是否已安装MySQL：`rpm -qa|grep mysql`  
+- 若存在则卸载掉：`rpm -e --nodeps mysql-libs`  
+- 使用wget命令下载到本地：`sudo wget https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm`  
+- 安装：  
+  - 1：`sudo rpm -ivh mysql80-community-release-el7-1.noarch.rpm`  
+  - 2：`sudo yum install mysql-server`(过程中有提示就输入`y`按回车执行即可)  
+- 检查是否安装成功：`mysqladmin -V`  
+- 开启MySQL：`sudo service mysqld start`  
+- 查看状态：`sudo service mysqld status`  
+- 查看默认密码：`sudo cat /var/log/mysqld.log`  
+- 登录：`mysql -uroot -p`
+- 修改root用户默认密码：`ALTER USER 'root'@'localhost' IDENTIFIED BY '新密码';`  
+- 添加用户：`CREATE USER '用户名'@'%' IDENTIFIED BY '密码';`  
+- 用户授权：`GRANT ALL ON *.* TO '用户名'@'%' with grant option;`  
+- 权限功能立即生效：`FLUSH PRIVILEGES;`  
 
 ### jdk
 
