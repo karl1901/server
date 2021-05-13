@@ -309,12 +309,17 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 
 - **CentOs 7及以上版本**  
 
+- 备份本地yum源：`mv /etc/yum.repos.d/CentOS-Base.repo /etc/yum.repos.d/CentOS-Base.repo_bak`  
+- 获取阿里yum源配置文件：`wget -O /etc/yum.repos.d/CentOS-Base.repo http://mirrors.aliyun.com/repo/Centos-7.repo`  
+  - (不是强制步骤，可选择不更新)
+  - 更新cache：`yum makecache`  
+  - 安装：`yum -y update`  
 - 查看是否已安装MySQL：`rpm -qa|grep mysql`  
 - 若存在则卸载掉：`rpm -e --nodeps mysql-libs`  
 - 使用wget命令下载到本地：`sudo wget https://repo.mysql.com//mysql80-community-release-el7-1.noarch.rpm`  
 - 安装：  
-  - 1：`sudo rpm -ivh mysql80-community-release-el7-1.noarch.rpm`  
-  - 2：`sudo yum install mysql-server`(过程中有提示就输入`y`按回车执行即可)  
+  - 1、：`sudo rpm -ivh mysql80-community-release-el7-1.noarch.rpm`  
+  - 2、：`sudo yum install mysql-server`(过程中有提示就输入`y`按回车执行即可)  
 - 检查是否安装成功：`mysqladmin -V`  
 - 开启MySQL：`sudo service mysqld start`  
 - 查看状态：`sudo service mysqld status`  
