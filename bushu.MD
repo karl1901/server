@@ -345,6 +345,38 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 - 执行`wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.66/bin/apache-tomcat-8.5.66.tar.gz`下载  
 - 执行`tar -zxvf apache-tomcat-8.5.66.tar.gz`解压  
 
+**部署java项目：**
+
+- 1、git目录下**新建**javaee文件夹(名字自定义)  
+- 2、**导出**java项目到javaee文件夹下  
+- 3、nginx配置文件**添加反代**到tomcat的配置：  
+
+```txt
+    location /javaweb/ {
+      proxy_redirect off;
+      proxy_set_header Host $host;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection "upgrade";
+      proxy_pass http://127.0.0.1:8080/;
+    }
+```
+
+- 4、**提交推送**项目到git服务器  
+- 5、服务器**拉取**项目并执行nginx的**重置**指令  
+- 6、进入tomcat的bin目录下执行`./startup.sh`**启动**tomcat  
+  - 停止tomcat：`./shutdown.sh`  
+- 7、进入tomcat的conf目录下，**编辑**server.xml文件(`vi server.xml`)  
+- 8、把appBase=""中的内容**修改**为git项目文件下的javaee文件夹：  
+
+```txt
+<Host name="localhost"  appBase="/home/karl/git/test-server/javaee"                  │Fast-forward
+            unpackWARs="true" autoDeploy="true">
+```
+
+配置修改完后只会只用提交推送java项目的war包，然后拉取到服务器，tomcat会自动把javaee文件夹下的war包解压
+
 ### 部署vue项目
 
 > [顶部](#部署部分)
@@ -382,7 +414,7 @@ module.exports = {
 
 - 3、用VsCode打开本地项目：**`Ctrl+~`**→**`npm run build`**(若要执行这一步，上面的两步要配置完)，执行完毕后本地的项目会自动打包到**项目输出路径**(本地目录的aliyun.code文件夹中的myvue文件夹下)，然后**本地提交推送**到Git服务器。  
 
-- 4、打开Putty，进入新建用户的git项目文件夹下，执行**拉取的指令**，因nginx的配置文件有变化，所以要执行**重置和启动**指令方才生效，最后在浏览器输入**服务器ip或域名**/myvue，就能进入到部署的vue项目的主页
+- 4、打开Putty，进入新建用户的git项目文件夹下，执行**拉取的指令**，因nginx的配置文件有变化，所以要执行**重置**的指令方才生效，最后在浏览器输入**服务器ip或域名**/myvue/，就能进入到部署的vue项目的主页
 
 > [顶部](#部署部分)  
 
