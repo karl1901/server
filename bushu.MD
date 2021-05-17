@@ -376,7 +376,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 ```
 
 配置修改完后,以后只用提交推送java项目的war包，然后拉取到服务器，tomcat会自动把javaee文件夹下的war包解压  
-用**域名/javaweb/java项目名/**就能访问到项目了  
+用`域名/javaweb/java项目名/`就能访问到项目了  
 
 ### 部署vue项目
 
