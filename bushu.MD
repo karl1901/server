@@ -348,7 +348,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 **部署java项目：**
 
 - 1、git目录下**新建**javaee文件夹(名字自定义)  
-- 2、**导出**java项目到javaee文件夹下  
+- 2、**导出**java项目到javaee文件夹下(war包)  
 - 3、nginx配置文件**添加反代**到tomcat的配置：  
 
 ```txt
