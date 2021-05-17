@@ -342,8 +342,8 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 
 > [顶部](#部署部分)  
 
-- 执行`wget https://mirrors.bfsu.edu.cn/apache/tomcat/tomcat-8/v8.5.65/bin/apache-tomcat-8.5.65-fulldocs.tar.gz`下载  
-- 执行`tar -zxvf apache-tomcat-8.5.65.tar.gz`解压  
+- 执行`wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.66/bin/apache-tomcat-8.5.66.tar.gz`下载  
+- 执行`tar -zxvf apache-tomcat-8.5.66.tar.gz`解压  
 
 ### 部署vue项目
 
