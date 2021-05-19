@@ -367,6 +367,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 - 5、服务器**拉取**项目并执行nginx的**重置**指令  
 - 6、进入tomcat的bin目录下执行`./startup.sh`**启动**tomcat  
   - 停止tomcat：`./shutdown.sh`  
+  - 执行完毕后，就能通过域名/javaweb/访问到tomcat主页
 - 7、进入tomcat的conf目录下，**编辑**server.xml文件(`vi server.xml`)  
 - 8、把appBase=""中的内容**修改**为git项目文件下的javaee文件夹：  
 
@@ -376,7 +377,7 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 ```
 
 配置修改完后,以后只用提交推送java项目的war包，然后拉取到服务器，tomcat会自动把javaee文件夹下的war包解压  
-用`域名/javaweb/java项目名/`就能访问到项目了  
+用`域名/javaweb/java项目名/`就能访问到项目了，一但上面的server.xml修改后，通过域名/javaweb/就不能访问到tomcat主页了，只能访问项目了，其是为了安全性。  
 
 ### 部署vue项目
 
