@@ -3,4 +3,4 @@
 ---
 
 - [**重置服务器**](https://code.aliyun.com/kangxianghui/server/blob/master/chongzhi.md)
-- [**部署服务器**](https://code.aliyun.com/kangxianghui/server/blob/master/bushu.MD)
+- [**部署服务器**](https://code.aliyun.com/kangxianghui/server/blob/master/bushu.md)
