@@ -3,7 +3,7 @@
 ---
 
 **部署前准备：**已购买**阿里云ECS服务器**和**域名**，电脑装了**Git**  
-注：没有域名也可以用服务器公网ip地址访问(服务器是必须有的)
+注：没有域名也可以用服务器公网ip地址访问(服务器是必须有的)，有域名了的就用自己的域名，并去域名管理控制台**申请SSL证书**
 
 ## 部署部分
 
@@ -176,10 +176,70 @@ gpgkey=https://nginx.org/keys/nginx_signing.key
 ![img37](img/bs/微信截图_20210413112651.png)
 - 3、**新建**三个文件：  
 - (把git密钥和公钥，登录服务器的公钥和私钥放到项目的key文件夹下)  
-- (建议：跟服务器有关的都提交到git，本项目提供了nginx文件)  
+- (建议：跟服务器有关的都提交到git，本项目提供了nginx文件，还有SSL证书也需要放在nginx文件夹下)  
 ![img38](img/bs/微信截图_20210413112847.png)
 - 4、**编辑**server.nginx.conf配置文件 (另一个mime.types文件是固定的，不动)  
 ![img39](img/bs/微信截图_20210413113502.png)
+  - 有域名的nginx配置文件代码：(需要把**域名**改为自己的域名，git项目名称改为自己的项目名称)  
+
+```txt
+#sudo nginx -t -c /home/karl/git/demo-server/nginx/server.nginx.conf
+#sudo nginx -c /home/karl/git/git项目文件名称/nginx/server.nginx.conf
+#sudo nginx -s stop -c /home/karl/git/git项目文件名称/nginx/server.nginx.conf
+#sudo nginx -s reload
+user root;
+worker_processes 1;
+events {
+  worker_connections 1024;
+}
+http {
+  include mime.types;
+  default_type application/octet-stream;
+  sendfile on;
+  keepalive_timeout 65;
+  gzip on;
+  #域名配置
+  server {
+    listen 80;
+    server_name 域名;
+    server_name www.域名;
+    charset utf-8;
+    rewrite ^(.*)$ https://${server_name}$1 permanent;
+  }
+  #kangxianghui.top的ssl配置
+  server {
+    listen 443 ssl;
+    server_name 域名;
+    ssl_certificate 域名.pem;
+    ssl_certificate_key 域名.key;
+    ssl_session_timeout 5m;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_prefer_server_ciphers on;
+    charset utf-8;
+    # 域名首页
+    location / {
+      root /home/karl/git/git项目文件名称/webroot;
+      index index.html;
+      expires -1;
+    }
+  }
+
+  #域名的8000端口配置
+  server {
+    listen 8000;
+    server_name 域名;
+    server_name www.域名;
+    charset utf-8;
+    location / {
+      root /home/karl/git/git项目文件名称/webroot;
+      index index.html;
+      expires -1;
+    }
+  }
+}
+```
+
 - 5、**新建**主页(index.html)，添加一点内容  
 ![img40](img/bs/微信截图_20210413113724.png)
 - 6、**推送并提交**项目  
