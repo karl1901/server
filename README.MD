@@ -9,4 +9,4 @@
 
 ---
 
-- [**OSS对象存储的购买和配置**](https://code.aliyun.com/kangxianghui/server/blob/master/chongzhi.md)  
+- [**OSS对象存储的购买和配置**](https://code.aliyun.com/kangxianghui/server/blob/master/oss.md)  
