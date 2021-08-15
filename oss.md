@@ -23,14 +23,15 @@
 ![img06](img/oss/微信截图_20210815140006.png)  
 ![img07](img/oss/微信截图_20210815140255.png)  
 注：Bucket创建后就能获取**Endpoint**和**Bucket名称**  
+- 3、配置Bucket权限
 ![img08](img/oss/微信截图_20210815140551.png)  
 ![img09](img/oss/微信截图_20210815140740.png)  
-![img10](img/oss/微信截图_20210815140958.png)
+![img10](img/oss/微信截图_20210815140958.png)  
 ![img11](img/oss/微信截图_20210815141254.png)  
 **至此，OSS基本配置已完成**  
 
 ### 3、管理OSS
 
-所有配置完成后，可进入[胡辉煜的oss管理程序](https://huhuiyu.top/oss-manage-ui/)管理OSS
-![img12](img/oss/微信截图_20210815143005.png)
-注：所有配置参数在上述的配置教程中都能找到 ！！！
+所有配置完成后，可进入[胡辉煜的oss管理程序](https://huhuiyu.top/oss-manage-ui/)管理OSS  
+![img12](img/oss/微信截图_20210815143005.png)  
+注：所有配置参数在上述的配置教程中都能找到 ！！！  
