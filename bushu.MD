@@ -143,12 +143,13 @@
 - 1、**执行`vi /etc/yum.repos.d/nginx.repo`编辑nginx下载源，内容如下：**  
 
 ``` txt
-[ginx-stable]  
-name=nginx stable repo  
-baseurl=http://nginx.org/packages/centos/$releasever/$basearch/  
-gpgcheck=1  
-enabled=1  
-gpgkey=https://nginx.org/keys/nginx_signing.key  
+[nginx-stable]
+name=nginx stable repo
+baseurl=http://nginx.org/packages/centos/$releasever/$basearch/
+gpgcheck=1
+enabled=1
+gpgkey=https://nginx.org/keys/nginx_signing.key
+module_hotfixes=true
 ```
 
 ![img33](img/bs/微信截图_20210413110244.png)
