@@ -403,7 +403,7 @@ http {
 
 > [顶部](#部署部分)  
 
-- 执行`wget https://downloads.apache.org/tomcat/tomcat-8/v8.5.66/bin/apache-tomcat-8.5.66.tar.gz`下载  
+- 执行`wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.73/bin/apache-tomcat-8.5.73.tar.gz`下载  
 - 执行`tar -zxvf apache-tomcat-8.5.66.tar.gz`解压  
 
 **部署java项目：**
