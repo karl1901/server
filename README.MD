@@ -1,12 +1,14 @@
-# 阿里云服务器管理
+# 云服务器管理
 
 ---
 
-- [**重置服务器**](https://code.aliyun.com/kangxianghui/server/blob/master/chongzhi.md)
-- [**部署服务器**](https://code.aliyun.com/kangxianghui/server/blob/master/bushu.MD)  
+- [**重置服务器-阿里云**](https://code.aliyun.com/kangxianghui/server/blob/master/reset_aliyun.md)  
+- [**重置服务器-腾讯云**](https://code.aliyun.com/kangxianghui/server/blob/master/reset_tencent.md)  
+- [**部署服务器-CentOS**](https://code.aliyun.com/kangxianghui/server/blob/master/bushu_centos.MD)  
+- [**部署服务器-Ubuntu**](https://code.aliyun.com/kangxianghui/server/blob/master/bushu_ubuntu.MD)  
 
-## 对象存储OSS管理
+## 对象存储（OSS）管理
 
 ---
 
-- [**OSS对象存储的购买和配置**](https://code.aliyun.com/kangxianghui/server/blob/master/oss.md)  
+- [**OSS的购买和配置**](https://code.aliyun.com/kangxianghui/server/blob/master/oss.md)  
