@@ -1,9 +1,9 @@
 # 云服务器管理
 
-- **重置服务器**  
+- **重置服务器：**  
   - [**阿里云**](https://code.aliyun.com/kangxianghui/server/blob/master/reset_aliyun.md)  
   - [**腾讯云**](https://code.aliyun.com/kangxianghui/server/blob/master/reset_tencent.md)  
-- **部署服务器**  
+- **部署服务器：**  
   - [**CentOS**](https://code.aliyun.com/kangxianghui/server/blob/master/bushu_centos.MD)  
   - [**Ubuntu**](https://code.aliyun.com/kangxianghui/server/blob/master/bushu_ubuntu.MD)  
 
