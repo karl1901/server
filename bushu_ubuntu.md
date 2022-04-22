@@ -2,6 +2,8 @@
 
 ---
 
+- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master/README.MD)  
+
 **部署前准备：** 已购买**腾讯云服务器**和**域名**，本地电脑安装了**Git**  
 注：没有域名也可以用服务器公网ip地址访问(服务器是必须有的)，有域名了的就用自己的域名，并去域名管理控制台**申请SSL证书**  
 
@@ -209,4 +211,4 @@
 
 ---
 
-- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master)  
+- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master/README.MD)  

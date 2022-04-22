@@ -2,6 +2,8 @@
 
 ---
 
+- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master/README.MD)  
+
 ## OSS对象存储购买教程
 
 ### 1、购买
@@ -35,3 +37,7 @@
 所有配置完成后，可进入[胡辉煜的oss管理程序](https://huhuiyu.top/oss-manage-ui/)管理OSS  
 ![img12](img/oss/微信截图_20210815143005.png)  
 注：所有配置参数在上述的配置教程中都能找到 ！！！  
+
+---
+
+- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master/README.MD)  
