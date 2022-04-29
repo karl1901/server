@@ -194,7 +194,7 @@
 
 > [顶部](#部署目录)  
 
-- 1、**安装Redis：**`apt install redis-server -y`(普通用户：`apt install redis-server -y`)  
+- 1、**安装Redis：**`apt install redis-server -y`(普通用户：`sudo apt install redis-server -y`)  
 - 2、**修改redis配置：**`vi /etc/redis/redis.conf`  
   - (1)、修改密码查找：`requirepass`  
   - (2)、修改ip绑定查找：`bind`  
