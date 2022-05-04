@@ -175,6 +175,8 @@
 - 1、**查找JDK信息：**`apt-cache search openjdk`(这里是查找的openjdk信息)  
 - 2、**安装JDK：**`apt install openjdk-8-jdk -y`(这里安装的openjdk8，普通用户：`sudo apt install openjdk-8-jdk -y`)  
 - 3、**安装完成后，查看JDK版本：**`java -version`  
+- 其他指令：
+  - **卸载OpenJDK：**`apt-get remove openjdk*`(普通用户：`sudo apt-get remove openjdk*`)
 
 ### Tomcat
 
