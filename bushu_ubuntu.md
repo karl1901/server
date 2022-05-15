@@ -24,6 +24,7 @@
 > [11、Tomcat](#tomcat)  
 > [12、Redis](#redis)  
 > [13、Node.js](#nodejs)  
+> [14、Nacos](#nacos)  
 
 ---
 
@@ -98,6 +99,8 @@
   - ssh端口：`ufw allow 22/tcp` || `ufw allow ssh`  
   - mysql端口：`ufw allow 3306/tcp`  
   - redis端口：`ufw allow 6379/tcp`  
+  - tomcat端口：`ufw allow 8080/tcp`  
+  - nacos端口：`ufw allow 8848/tcp`  
   - ![img10](img/bs_ubuntu/微信截图_20220421214016.png)  
 - 5、**查看防火墙规则编号：**`ufw status numbered`  
 ![img11](img/bs_ubuntu/微信截图_20220421214307.png)  
@@ -210,6 +213,27 @@
 - 2、**安装Node.js：**`apt-get install -y nodejs`  
 - 3、**查看Node.js版本：**`node -v`  
 - 4、**查看npm版本：**`npm -v`  
+
+### Nacos
+
+> [顶部](#部署目录)  
+
+- 1、**下载Nacos压缩包：**`curl -OL Nacos的下载地址`(下载地址在[官方github](https://github.com/alibaba/nacos/releases)上面，Linux下载.tar.gz的压缩包)  
+- 2、**解压Nacos的压缩包：**`tar -zxvf Nacos的压缩包名`  
+- 3、**配置Nacos：**  
+  - (1)、**在数据库创建名为`nacos_config`的数据库**  
+  - (2)、**进入Nacos的`conf/`目录下**  
+  - (3)、**运行`nacos-mysql.sql`文件，运行完成后`nacos_config`数据库中就有了Nacos系统默认的表(12张表-nacos-2.1.0版本)**  
+  - (4)、**编辑`application.properties`文件：**  
+  - ![img19](img/bs_ubuntu/微信截图_20220515211807.png)  
+  - (5)、**修改完后，保存并退出**  
+- 4、**启动Nacos：**  
+  - (1)、**进入Nacos的bin/目录下**  
+  - (2)、**输入`bash startup.sh -m standalone`，以单机模式启动**  
+    - `standalone`--单机模式  
+    - `cluster`--集群模式  
+- 5、**配置Nginx访问路径到服务器Nacos访问路径**  
+- 6、**添加Nacos的防火墙**  
 
 ---
 
