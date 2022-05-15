@@ -228,7 +228,7 @@
   - ![img19](img/bs_ubuntu/微信截图_20220515211807.png)  
   - (5)、**修改完后，保存并退出**  
 - 4、**启动Nacos：**  
-  - (1)、**进入Nacos的bin/目录下**  
+  - (1)、**进入Nacos的`bin/`目录下**  
   - (2)、**输入`bash startup.sh -m standalone`，以单机模式启动**  
     - `standalone`--单机模式  
     - `cluster`--集群模式  
