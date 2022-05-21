@@ -227,13 +227,14 @@
   - (4)、**编辑`application.properties`文件：**  
   - ![img19](img/bs_ubuntu/微信截图_20220515211807.png)  
   - (5)、**修改完后，保存并退出**  
-- 4、**添加Nacos的防火墙**  
+- 4、**添加Nacos的防火墙（根据端口号-默认8848）**  
 - 5、**启动Nacos：**  
   - (1)、**进入Nacos的`bin/`目录下**  
   - (2)、**输入`bash startup.sh -m standalone`，以单机模式启动**  
     - `standalone`--单机模式  
-    - `cluster`--集群模式  
-- 6、**配置Nginx访问路径到服务器Nacos访问路径**  
+    - `cluster`--集群模式(默认)  
+- 6、**配置Nginx**  
+- 7、**访问Nacos系统**  
 
 ---
 
