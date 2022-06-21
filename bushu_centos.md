@@ -115,7 +115,7 @@
   - **执行`vi /etc/ssh/sshd_config`配置ssh**
   - **输入`/PasswordAuthentication`回车找到对应配置项**
   - **修改为`PasswordAuthentication no`拒绝使用密码登陆**
-  - **执行`systemctl restart sshd.service`重启ssh服务生效**
+  - **执行`systemctl restart sshd.service`重启ssh服务生效**  
 ![img29](img/bs_centos/微信截图_20210413084724.png)
 - **注：新建的用户也有执行相同的操作：9-11的步骤**
 - **！！！拒绝使用密码一旦开启，密钥文件若丢失，就再也无法登录服务器了(但是登录后可以改回密码登录权限) ！！！**
