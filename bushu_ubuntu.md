@@ -187,6 +187,7 @@
 
 - 1、**安装Tomcat：**`curl -OL Tomcat的下载地址`(我这里安装的是Tomcat8：`curl -OL https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.78/bin/apache-tomcat-8.5.78.tar.gz`，地址可以去[Tomcat官方](https://tomcat.apache.org/)找)  
 - 2、**解压Tomcat文件：**`tar -zxvf 文件名`(例如：`tar -zxvf apache-tomcat-8.5.78.tar.gz`)  
+  - (1)、给定tomcat目录权限：`chmod -R 777 目录名`  
 - 3、**进入Tomcat解压文件夹的`/conf/`目录下**  
 - 4、**编辑server.xml文件：**`vi server.xml`  
 - 5、**查找`appBase`：**`/appBase`，输入后按回车定位  
