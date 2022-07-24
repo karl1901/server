@@ -163,7 +163,7 @@ PubkeyAcceptedKeyTypes +ssh-rsa
   - (1)、进入服务器项目目录的nginx配置文件的目录下，输入：**pwd**查看完整的服务器路径，然后复制，粘贴修改项目的nginx.conf配置文件顶部的路径  
   - (2)、提交项目，推送到git  
   - (3)、进入服务器git项目目录下，输入`git pull`拉取项目  
-- 8、**查看nginx配置文件的路径是否一致：**`sudo nginx -t -c 服务器nginx.conf配置文件地址`(就是nginx.conf配置文件顶部的第一条指令)  
+- 8、**指定nginx配置文件：**`sudo nginx -t -c 服务器nginx.conf配置文件地址`(就是nginx.conf配置文件顶部的第一条指令)  
 - 9、**启动nginx服务：**`sudo nginx -c 服务器nginx.conf配置文件地址`(就是nginx.conf配置文件顶部的第一条指令)  
 - 现在能通过浏览器访问项目网页了！！！  
 - 10、**配置git项目自动拉取：**，切割一个新窗口，输入`watch -n 执行间隔时间(单位：秒/s) git pull`(建议：10分钟~30分钟)  
