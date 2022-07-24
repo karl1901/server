@@ -79,6 +79,11 @@
 > [顶部](#部署目录)  
 
 - 具体步骤详见**CentOS部署教程文档**的**putty配置无密码登录**部分。
+  - 注意：如果报错不支持ssh-rsa，则需要手动添加支持ssh-rsa类型的公钥  
+  - 执行`vi /etc/ssh/sshd_config`编辑sshd配置文件  
+  - 在合适的位置添加一行内容：  
+  - > PubkeyAcceptedKeyTypes=+ssh-rsa  
+  - 执行`systemctl restart sshd.service`重启sshd服务生效  
 - 配置无密码登录：  
 ![img09](img/bs_ubuntu/微信截图_20220421153914.png)  
 - **注：新建的用户也有执行相同的操作**  
@@ -134,6 +139,12 @@
 - 1、**安装Git：**`apt install git -y`  
 - 2、**安装完成后查看版本：**`git --version`  
 - 3、**配置私钥：**  
+  - 注意：如果报错不支持ssh-rsa，则需要手动添加支持ssh-rsa类型的公钥  
+  - 执行`vi /etc/ssh/ssh_config`编辑ssh配置文件  
+  - 在合适的位置添加如下内容：  
+  - > HostkeyAlgorithms +ssh-rsa
+    PubkeyAcceptedKeyTypes +ssh-rsa  
+  - 执行`systemctl restart ssh.service`重启ssh服务生效  
   - (1)、执行`vi ~/.ssh/id_rsa`编辑私钥文件，将私钥(**本地的id_rsa文件内容**)复制进去，然后保存并退出  
   - (2)、执行`chmod 600 ~/.ssh/id_rsa`配置私钥文件权限  
 - 4、**创建git项目文件夹：**`mkdir git`  
