@@ -189,6 +189,10 @@ PubkeyAcceptedKeyTypes +ssh-rsa
 - 7、**添加数据库用户：**`CREATE USER '用户名'@'%' IDENTIFIED BY '密码';`  
 - 8、**设置用户权限：**`GRANT ALL ON *.* TO '用户名'@'%' with grant option;`  
 - 9、**权限功能立即生效：**`FLUSH PRIVILEGES;`  
+- 注意：如果远程连接失败，报错10061错误；请检查用户权限是否为%、防火墙是否开放了3306端口、服务器安全组  
+- 如果以上都是正确的，可以修改mysql配置文件来解决：  
+- (1)、执行`sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf`打开配置文件  
+- (2)、将bind - address 的默认值(127.0.0.1) 修改成 `远程连接的ip`(推荐，更安全)或`*`  
 
 ### JDK
 
