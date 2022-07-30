@@ -2,7 +2,7 @@
 
 ---
 
-- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master/README.MD)  
+- [**返回**](https://github.com/karl1901/server/blob/master/README.MD)  
 
 - 1、**打开**[阿里云官网](https://aliyun.com)
 - 2、**登录**阿里云账号
@@ -30,4 +30,4 @@
 
 ---
 
-- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master/README.MD)  
+- [**返回**](https://github.com/karl1901/server/blob/master/README.MD)  

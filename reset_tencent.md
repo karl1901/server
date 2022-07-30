@@ -2,7 +2,7 @@
 
 ---
 
-- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master/README.MD)  
+- [**返回**](https://github.com/karl1901/server/blob/master/README.MD)  
 
 - 1、**打开**[腾讯云官网](https://cloud.tencent.com/)  
 - 2、**登录**腾讯云账号  
@@ -24,4 +24,4 @@
 
 ---
 
-- [**返回**](https://code.aliyun.com/kangxianghui/server/tree/master/README.MD)  
+- [**返回**](https://github.com/karl1901/server/blob/master/README.MD)  
