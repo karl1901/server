@@ -11,17 +11,18 @@
 
 > [1、putty](#putty)  
 > [2、tmux](#tmux)  
-> [3、用户](#用户)  
-> [4、putty-配置无密码登录](#putty-配置无密码登录)  
-> [5、防火墙](#防火墙)  
-> [6、nginx](#nginx)  
-> [7、阿里云创建项目](#阿里云创建项目)  
-> [8、git](#git)  
+> [3、unzip](#unzip)  
+> [4、用户](#用户)  
+> [5、putty-配置无密码登录](#putty-配置无密码登录)  
+> [6、防火墙](#防火墙)  
+> [7、nginx](#nginx)  
+> [8、阿里云创建项目](#阿里云创建项目)  
+> [9、git](#git)  
 > [--- git其他指令](#git其他指令)  
-> [9、mysql](#mysql)  
-> [10、jdk](#jdk)  
-> [11、tomcat](#tomcat)  
-> [12、部署Vue项目](#部署vue项目)  
+> [10、mysql](#mysql)  
+> [11、jdk](#jdk)  
+> [12、tomcat](#tomcat)  
+> [13、部署Vue项目](#部署vue项目)  
 
 ### putty
 
@@ -60,6 +61,13 @@
 **竖向分割窗口：Ctrl+b % 或 tmux split-window** (百分号要用shtift+5键，'或'字后面是指令)  
 **移动到指定方向的窗口：Ctrl+b 方向键**  
 **关闭当前窗口：Ctrl+d 或 exit** ('或'字后面是指令)  
+
+### unzip
+
+> [顶部](#部署目录)  
+
+- 1、使用**yum list zip unzip**查看 (centos官方镜像自带zip，unzip)
+- 2、执行**yum install -y unzip zip**安装
 
 ### 用户
 

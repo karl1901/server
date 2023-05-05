@@ -14,17 +14,18 @@
 > [1、Putty](#putty)  
 > [2、更新安装源](#更新安装源)  
 > [3、tmux](#tmux)  
-> [4、用户](#用户)  
-> [5、Putty配置无密码登录](#putty配置无密码登录)  
-> [6、防火墙](#防火墙)  
-> [7、Nginx](#nginx)  
-> [8、Git](#git)  
-> [9、MySQL](#mysql)  
-> [10、JDK](#jdk)  
-> [11、Tomcat](#tomcat)  
-> [12、Redis](#redis)  
-> [13、Node.js](#nodejs)  
-> [14、Nacos](#nacos)  
+> [4、unzip](#unzip)  
+> [5、用户](#用户)  
+> [6、Putty配置无密码登录](#putty配置无密码登录)  
+> [7、防火墙](#防火墙)  
+> [8、Nginx](#nginx)  
+> [9、Git](#git)  
+> [10、MySQL](#mysql)  
+> [11、JDK](#jdk)  
+> [12、Tomcat](#tomcat)  
+> [13、Redis](#redis)  
+> [14、Node.js](#nodejs)  
+> [15、Nacos](#nacos)  
 
 ---
 
@@ -55,6 +56,12 @@
 > [顶部](#部署目录)  
 
 - 1、**安装tmux：**`apt install tmux -y`  
+
+### unzip
+
+> [顶部](#部署目录)  
+
+- 1、执行`apt-get install unzip -y`安装  
 
 ### 用户
 
