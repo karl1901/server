@@ -56,6 +56,7 @@
 > tmux的其他操作：  
 **恢复到上次启动的session：tmux a**  
 **查看全部session：tmux ls**  
+**进入指定session：tmux a -t session (ID/名)**  
 **删除指定session：tmux kill-session -t session (ID/名)**  
 **横向分割窗口：Ctrl+b " 或 tmux split-window -h** (双引号要 用shift+引号键，'或'字后面是指令)  
 **竖向分割窗口：Ctrl+b % 或 tmux split-window** (百分号要用shtift+5键，'或'字后面是指令)  
