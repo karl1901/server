@@ -179,7 +179,7 @@ PubkeyAcceptedKeyTypes +ssh-rsa
 
 > [顶部](#部署目录)  
 
-- 1、**下载安装源：**`curl -OL 安装源地址`(更新地址可以去[MySQL官方](https://www.mysql.com/)找，我用的是：`curl -OL https://repo.mysql.com//mysql-apt-config_0.8.22-1_all.deb`)  
+- 1、**下载安装源：**`curl -OL 安装源地址`(更新地址可以去[MySQL官方](https://downloads.mysql.com/archives/community/)找，我用的是：`curl -OL https://repo.mysql.com//mysql-apt-config_0.8.22-1_all.deb`)  
 - 2、**更新安装配置：**`sudo dpkg -i 更新地址后面的完整文件名`(例如：`sudo dpkg -i mysql-apt-config_0.8.22-1_all.deb`)  
   - 选择mysql8  
   - ![img12](img/bs_ubuntu/微信截图_20220422152355.png)  
