@@ -233,7 +233,7 @@ PubkeyAcceptedKeyTypes +ssh-rsa
     - 1、打开配置文件：`nano /etc/mysql/mysql.conf.d/mysqld.cnf`(普通用户：`sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf`)  
     - 2、将bind - address 的默认值(127.0.0.1) 修改成 `远程连接的ip`(推荐，更安全)或`*`  
     - 3、保存并退出  
-    - 4、重启服务：`service mysql restart`(普通用户：`service mysql restart`)  
+    - 4、重启服务：`service mysql restart`(普通用户：`sudo service mysql restart`)  
 
 > MySQL的其他操作：  
 彻底卸载MySQL：
