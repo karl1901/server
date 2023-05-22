@@ -1,3 +1,5 @@
 git add *
-git commit -m "服务器教程项目提交==>$(Get-Date)"
+$commitInfo = Read-Host 'please input commitInfo'
+git commit -m $commitInfo
 git push
+Pause

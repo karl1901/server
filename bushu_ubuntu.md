@@ -201,6 +201,47 @@ PubkeyAcceptedKeyTypes +ssh-rsa
 - (1)、执行`sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf`打开配置文件  
 - (2)、将bind - address 的默认值(127.0.0.1) 修改成 `远程连接的ip`(推荐，更安全)或`*`  
 
+#### 22.04版本
+
+- **1、安装MySQL：**`apt-get install mysql-server -y`(普通用户：`sudo apt-get install mysql-server -y`)  
+- **2、检查MySQL服务是否成功启动：**`netstat -tap | grep mysql`(普通用户：`sudo netstat -tap | grep mysql`) **或者：**`service mysql status`(普通用户：`sudo service mysql status`)  
+  - **如果未启动，就启动服务：**`service mysql start`(普通用户：`sudo service mysql start`)  
+  - 启动服务如果遇到警告(su:warning blah blah blah...)：  
+    - **1、停止服务：**`service mysql stop`(普通用户：`sudo service mysql stop`)  
+    - **2、为mysql用户创建一个主目录：**`usermod -d /var/lib/mysql/ mysql`(普通用户：`sudo usermod -d /var/lib/mysql/ mysql`)  
+    - **3、启动服务：**`service mysql start`(普通用户：`sudo service mysql start`)  
+- **3、本地连接MySQL：**  
+  - **1、下载连接客户端(一般安装时都会自动安装客户端)：**`apt install mysql-client -y`(普通用户：`sudo apt install mysql-client -y`)  
+  - **2、登录MySQL(无需密码)：**`mysql -uroot -p`(普通用户：`sudo mysql -uroot -p`)  
+  - 如果安装时没有设置密码，并且登录不了MySQL，需要按照如下步骤操作：  
+    - **1、查看默认的用户名和密码：**`cat /etc/mysql/debian.cnf`(普通用户：`sudo cat /etc/mysql/debian.cnf`)  
+    - **2、用户查到的用户名和密码登录：**`mysql -u xxx -p xxx`(普通用：`sudo mysql -u xxx -p xxx`)  
+    - **3、设置root用户的密码：**  
+      - `use mysql;`  
+      - `flush privileges;`  
+      - `ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '你的密码';`  
+      - `flush privileges;`  
+- **4、远程连接MySQL(需使用默认账户操作)：**  
+  - **1、切换到mysql数据库：**`use mysql;`  
+  - **2、查看user列表：**`select user,host from user;`  
+  - **3、创建用户：**`CREATE USER '用户名'@'%' IDENTIFIED BY '密码';`  
+  - **4、设置用户权限：**`GRANT ALL ON *.* TO '用户名'@'%' with grant option;`  
+  - **5、权限功能立即生效：**`FLUSH PRIVILEGES;`  
+  - 如果远程连接失败，非密码错误原因，可以尝试以下操作：  
+  - 1、直接修改用户权限：`update user set host='%' where user='用户名';`  
+  - 2、如果上述操作不行，需要修改配置文件：
+    - 1、打开配置文件：`nano /etc/mysql/mysql.conf.d/mysqld.cnf`(普通用户：`sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf`)  
+    - 2、将bind - address 的默认值(127.0.0.1) 修改成 `远程连接的ip`(推荐，更安全)或`*`  
+    - 3、保存并退出  
+    - 4、重启服务：`service mysql restart`(普通用户：`service mysql restart`)  
+
+> MySQL的其他操作：  
+彻底卸载MySQL：
+1、**将包以及软件的配置文件全部删除：**`apt purge mysql-*`(普通用户：`sudo apt purge mysql-*`)  
+2、`rm -rf /etc/mysql/ /var/lib/mysql`(普通用户：`sudo rm -rf /etc/mysql/ /var/lib/mysql`)  
+3、`apt autoremove`(普通用户：`sudo apt autoremove`)  
+4、`apt autoclean`(普通用户：`sudo apt autoclean`)  
+
 ### JDK
 
 > [顶部](#部署目录)  
