@@ -6,6 +6,7 @@
 - **重置服务器：**  
   - [**阿里云**](https://github.com/karl1901/server/blob/master/reset_aliyun.md)  
   - [**腾讯云**](https://github.com/karl1901/server/blob/master/reset_tencent.md)  
+  - [**华为云**](https://github.com/karl1901/server/blob/master/reset_huawei.md)  
 
 ---
 
