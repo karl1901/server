@@ -94,7 +94,15 @@
 PubkeyAcceptedKeyTypes=+ssh-rsa
 ```
 
-  - 执行`systemctl restart sshd.service`重启sshd服务生效  
+- 若不想新建用户，只用root，ssh配置如下：
+
+```txt
+PermitRootLogin prohibit-password
+PasswordAuthentication no
+PubkeyAuthentication yes
+```
+
+- 执行`systemctl restart sshd.service`重启sshd服务生效  
 - 配置无密码登录：  
 ![img09](img/bs_ubuntu/微信截图_20220421153914.png)  
 - **注：新建的用户也有执行相同的操作**  
