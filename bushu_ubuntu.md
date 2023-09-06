@@ -55,7 +55,7 @@
 
 > [顶部](#部署目录)  
 
-- 1、**安装tmux：**`apt install tmux -y`  
+- 1、**安装tmux：**`apt-get install tmux -y`  
 
 ### unzip
 
