@@ -70,6 +70,9 @@
 - 1、**添加用户：**`adduser 用户名`  
 ![img05](img/bs_ubuntu/微信截图_20220421145601.png)  
 2、**修改sudo权限：** 输入`visudo`进入配置文件编辑，然后添加内容：`用户名 ALL=(ALL) ALL`  
+
+> 如希望用户sudo不输入密码则是：`用户名 ALL=(ALL:ALL) NOPASSWD:ALL`  
+
 ![img06](img/bs_ubuntu/微信截图_20220421150434.png)  
 ![img07](img/bs_ubuntu/微信截图_20220421150547.png)  
 ![img08](img/bs_ubuntu/微信截图_20220421152653.png)  
