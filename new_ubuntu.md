@@ -154,7 +154,7 @@ ps：如果报错不支持ssh-rsa，则需要手动添加支持ssh-rsa类型的�
 # 编辑sshd配置文件
 vi /etc/ssh/sshd_config
 # 在合适的位置添加一行内容
-PubkeyAcceptedKeyTypes=+ssh-rsa
+PubkeyAcceptedAlgorithms +ssh-rsa
 # 保存并退出
 # 重启sshd服务以生效
 systemctl restart sshd.service
@@ -176,6 +176,7 @@ PasswordAuthentication no
 # 保存并退出
 # 重启sshd服务以生效
 systemctl restart sshd.service
+# 如果不生效，请把 PasswordAuthentication no 放到配置文件最上面一行
 ```
 
 ps：拒绝使用密码一旦开启，密钥文件若丢失，就再也无法登录服务器了
@@ -404,7 +405,7 @@ update user set host='%' where user='用户名';
 nano /etc/mysql/mysql.conf.d/mysqld.cnf
 # 找到 bind - address 配置项
 # 默认值：127.0.0.1
-# 修改成：* 或者 远程连接的ip (推荐，更安全)
+# 修改成：*（也可以是0.0.0.0，表示允许所有机器访问） 或者 远程连接的ip (推荐，更安全)
 # 保存并退出
 # 重启MySQL服务以生效
 service mysql restart

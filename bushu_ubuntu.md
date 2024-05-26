@@ -94,7 +94,7 @@
   - 在合适的位置添加一行内容：  
 
 ```txt
-PubkeyAcceptedKeyTypes=+ssh-rsa
+PubkeyAcceptedAlgorithms +ssh-rsa
 ```
 
 - 若不想新建用户，只用root，ssh配置如下：
@@ -110,6 +110,7 @@ PubkeyAuthentication yes
 ![img09](img/bs_ubuntu/微信截图_20220421153914.png)  
 - **注：新建的用户也有执行相同的操作**  
 - **注意：拒绝使用密码一旦开启，密钥文件若丢失，就再也无法登录服务器了(但是登录后可以改回密码登录权限)**  
+- **特别提示：如果PasswordAuthentication no不生效，请把他放在配置文件最上面一行，即可**  
 
 ### 防火墙
 
