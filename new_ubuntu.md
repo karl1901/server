@@ -498,8 +498,8 @@ service redis restart
 1、安装
 
 ```shell
-# 安装
-apt-get install -y nodejs
+# 安装 nodejs 和 npm
+apt-get install -y nodejs npm
 # 查看nodejs版本
 node -v
 # 查看npm版本
